@@ -33,6 +33,80 @@
                         <div class="card-box">
 
                             <h5 class="mb-4 text-uppercase">
+                                        Team Insights</h5>
+
+                         <div class="row">
+
+
+                                    <div class="col-md-6">
+                                        <a href="#" class="card p-3 outline">
+
+
+                                                            <div class="text-center">
+                                                                <h5>TEAM ENGAGEMENT SCORE</h5>
+                                                            </div>
+
+                                                            <div id="g1" class="gauge-chart"></div>
+
+                                                    
+
+                                        </a> <!-- end widget-rounded-circle-->
+                                        </div> <!-- end col-->
+
+                                    
+
+                                    <div class="col-md-6">
+                                        <a href="#" class="card p-3 outline">
+
+                                            <div class="text-center mb-3">
+                                                                <h5 class="mb-2 text-uppercase">Recognition stats</h5>
+                                                            </div>
+
+
+                                                            <div class="table-responsive">
+                                        <table class="table table-centered table-hover mb-0">
+                                            
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-user text-truncate">
+                                                        <img src="/template-assets/images/users/bill.jpg" alt="table-user" class="mr-2 rounded-circle">
+                                                        <a href="javascript:void(0);" class="text-body font-weight-semibold">Bill H</a>
+                                                    </td>
+                                                    <td>
+
+                                                        <i class="mdi mdi-cards-heart"></i> 4
+                                                        
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td class="table-user text-truncate">
+                                                        <img src="/template-assets/images/users/elsa.jpg" alt="table-user" class="mr-2 rounded-circle">
+                                                        <a href="javascript:void(0);" class="text-body font-weight-semibold">Elsa B</a>
+                                                    </td>
+                                                    <td>
+                                                        <i class="mdi mdi-cards-heart"></i> 3
+                                                    </td>
+                                                    
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                                    
+
+                                        </a> <!-- end widget-rounded-circle-->
+                                        </div> <!-- end col-->
+
+
+                                    </div>
+                                </div>
+
+
+                        <div class="card-box">
+
+                            <h5 class="mb-4 text-uppercase">
                                         Your Stats</h5>
 
                          <div class="row">
@@ -660,6 +734,23 @@ function myFunction(x) {
   x.classList.toggle("mdi mdi-heart");
 }
 </script>
+
+
+             <%= javascript_include_tag 'admin/libs/flatpickr/flatpickr.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-knob/jquery.knob.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-sparkline/jquery.sparkline.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/flot-charts/jquery.flot.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/flot-charts/jquery.flot.resize.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/flot-charts/jquery.flot.time.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/flot-charts/jquery.flot.tooltip.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/flot-charts/jquery.flot.selection.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/flot-charts/jquery.flot.crosshair.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/dashboard-1.init.js', 'data-turbolinks-track': 'reload' %>
+  
+<%= javascript_include_tag 'admin/libs/raphael/raphael.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/justgage/justgage.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/justgage.init.js', 'data-turbolinks-track': 'reload' %>
+
 
 <%= javascript_include_tag 'admin/libs/chart-js/Chart.bundle.min.js', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'admin/libs/moment/moment.min.js', 'data-turbolinks-track': 'reload' %>
