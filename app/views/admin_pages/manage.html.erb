@@ -253,7 +253,7 @@
 
 
                                             <div class="btn-group mb-2 float-right">
-                                                <button type="button" class="btn btn-light small btn-sm float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add new person </button>
+                                                <button type="button" class="btn btn-light small btn-sm float-right" data-toggle="modal" data-target=".bs-example-modal-lg2">Add new person </button>
                                                 
                                             </div>
 
@@ -437,14 +437,13 @@
                             </div>
 
 
-
-                                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
-                                <div class="modal-dialog modal-md">
+                            <div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="card">
                                             <div class="card-body">
                                                 <button type="button" class="close mt-0" data-dismiss="modal" aria-hidden="true">×</button>
-                                                <h3 class="mb-4 text-center"> Gift</h3>
+                                                <h3 class="mb-4 text-center"> Add new person</h3>
 
                                                 <form>
                                                     <div id="basicwizard">
@@ -469,14 +468,15 @@
 
                                                         <div class="tab-content b-0 mb-0">
                                                             <div class="tab-pane active" id="basictab1">
+                                                                <h4 class="mt-2 mb-4 text-center">How would you like to add them?</h4>
                                                                 <div class="row mt-0">
                                                                     <div class="col-4">
                                                                         <a href="#" class="card p-3 outline">
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <div class="text-center">
-                                                                                    <h5 class="text-dark my-1">Create<br></h5>
-                                                                                    <p class="text-muted mb-1 small">Unique gift from scratch</p>
+                                                                                    <h3 class="text-dark my-1">Sync<br></h3>
+                                                                                    <p class="text-muted mb-1 small mt-3">Connect directly to your HR software and sync</p>
                                                                                 </div>
                                                                             </div>
                                                                           </div> <!-- end row-->
@@ -487,9 +487,10 @@
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <div class="text-center">
-                                                                                    <h5 class="text-dark my-1">
-                                                                                    Credit</h5>
-                                                                                    <p class="text-muted mb-1 small">Purchase or send credit</p>
+                                                                                    <h3 class="text-dark my-1">
+                                                                                    Bulk</h3>
+                                                                                    <p class="text-muted mb-1 small mt-3">Use a CSV file to upload in bulk.</p>
+                                                                                    <br>
                                                                                 </div>
                                                                             </div>
                                                                           </div> <!-- end row-->
@@ -500,8 +501,9 @@
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <div class="text-center">
-                                                                                    <h5 class="text-dark my-1">Collections</h5>
-                                                                                    <p class="text-muted mb-1 small">Choose from collections</p>
+                                                                                    <h3 class="text-dark my-1">Manually</h3>
+                                                                                    <p class="text-muted mb-1 small mt-3">Add users to your team manually</p>
+                                                                                    <br>
                                                                                 </div>
                                                                             </div>
                                                                           </div> <!-- end row-->
@@ -547,7 +549,159 @@
                                                                         <div class="text-center">
                                                                             <h4 class="mt-2 mb-4 text-center">Here's your summary</h4>
 
-                                                                            <p class="w-75 mb-4 mx-auto"><i>"Here's a message that has been created to accompany the gift. The why etc"</i></p>
+                                                                            <p class="w-75 mb-4 mx-auto"><i>"Here's a message that has been created to accompany the thing that has been given. Explaining the why etc"</i></p>
+                                                                        </div>
+
+                                                                        <div class="row justify-content-md-center">
+
+                                                                            <div class="mb-3">
+                                                                                <div class="custom-control custom-checkbox">
+                                                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                                    <label class="custom-control-label" for="customCheck1"> Send message privately</label>
+                                                                                </div>
+                                                                                <div class="custom-control custom-checkbox mt-2">
+                                                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                                    <label class="custom-control-label" for="customCheck2"> Publish message to the hub</label>
+                                                                                </div>
+                                                                            
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row justify-content-md-center">
+                                                                            <button type="button" class="btn btn-warning text-center" disabled>
+                                                                              Submit feedback
+                                                                            </button>
+                                                                        </div>
+
+                                                                    </div> <!-- end col -->
+                                                                </div> <!-- end row -->
+                                                            </div>
+
+                                                        </div> <!-- tab-content -->
+                                                    </div> <!-- end #basicwizard-->
+                                                </form>
+
+                                            </div> <!-- end card-body -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <button type="button" class="close mt-0" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h3 class="mb-4 text-center"> Give</h3>
+
+                                                <form>
+                                                    <div id="basicwizard">
+
+                                                        <ul class="nav nav-tabs nav-bordered nav-justified form-wizard-header mb-2">
+                                                            <li class="nav-item">
+                                                                <a href="#basictab1" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 active"> 
+                                                                    <span class="d-none d-sm-inline">Step 1</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#basictab2" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2">
+                                                                    <span class="d-none d-sm-inline">Step 2</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#basictab3" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2">
+                                                                    <span class="d-none d-sm-inline">Step 3</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="tab-content b-0 mb-0">
+                                                            <div class="tab-pane active" id="basictab1">
+                                                                <h4 class="mt-2 mb-4 text-center">What would you like to give?</h4>
+                                                                <div class="row mt-0">
+                                                                    <div class="col-4">
+                                                                        <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h3 class="text-dark my-1">Gift<br></h3>
+                                                                                    <p class="text-muted mb-1 small mt-3">A days holiday, a late start. Show you're listening and that you really care.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col -->
+                                                                    <div class="col-4">
+                                                                       <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h3 class="text-dark my-1">
+                                                                                    Reward</h3>
+                                                                                    <p class="text-muted mb-1 small mt-3">Celebrate top performers that truly embody your company values.</p>
+                                                                                    <br>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col -->
+                                                                    <div class="col-4">
+                                                                        <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h3 class="text-dark my-1">Incentive</h3>
+                                                                                    <p class="text-muted mb-1 small mt-3">Drive the behaviours you want inline with your company values</p>
+                                                                                    <br>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col -->
+                                                                </div> <!-- end row -->
+
+                                                            </div>
+
+                                                            <div class="tab-pane" id="basictab2">
+                                                                <h4 class="mt-2 mb-4 text-center">Add a message?</h4>
+                                                                <div class="row mt-0">
+                                                                    <div class="col-12">
+                                                                        <textarea id="" class="form-control" rows="4" placeholder="Your message has a limit of 400 characters."></textarea>
+                                                                    </div> <!-- end col -->
+                                                                </div> <!-- end row -->
+
+                                                                <div class="form-group mb-3 mt-3">
+                                                                                <label for="example-select">What company value is this supporting?</label>
+                                                                                <select class="form-control" id="example-select">
+                                                                                    <option>Value 1</option>
+                                                                                    <option>Value 2</option>
+                                                                                    <option>Value 3</option>
+                                                                                    <option>value 4</option>
+                                                                                    <option>Value 5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                <ul class="list-inline wizard mt-2 mb-0">
+                                                                    <li class="previous list-inline-item disabled">
+                                                                        <a href="javascript: void(0);" class="btn btn-light">Previous</a>
+                                                                    </li>
+                                                                    <li class="next list-inline-item float-right">
+                                                                        <a href="javascript: void(0);" class="btn btn-light">Next</a>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </div>
+
+                                                            <div class="tab-pane" id="basictab3">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="text-center">
+                                                                            <h4 class="mt-2 mb-4 text-center">Here's your summary</h4>
+
+                                                                            <p class="w-75 mb-4 mx-auto"><i>"Here's a message that has been created to accompany the thing that has been given. Explaining the why etc"</i></p>
                                                                         </div>
 
                                                                         <div class="row justify-content-md-center">
@@ -629,14 +783,9 @@
 
                                                     <td class="small"><i class="fa fa-diamond" aria-hidden="true"></i> 132</td>
                                                     <td>
-                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Give shoutout"><i class="mdi mdi-bullhorn"></i></a>
+                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shoutout"><i class="mdi mdi-bullhorn"></i></a>
                                                         <div class="btn-group">
-                                                            <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create <i class="mdi mdi-chevron-down"></i></button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Gift</a>
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg1">Reward</a>
-                                                                <a class="dropdown-item" href="#">Incentive</a>
-                                                            </div>
+                                                            <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Give <i class=" mdi mdi-dots-horizontal"></i></button>
                                                         </div>
 
                                                     </td>
@@ -664,13 +813,10 @@
 
                                                     <td class="small"><i class="fa fa-diamond" aria-hidden="true"></i> 132</td>
                                                     <td>
-                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Give shoutout"><i class="mdi mdi-bullhorn"></i></a>
+                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shoutout"><i class="mdi mdi-bullhorn"></i></a>
                                                         <div class="btn-group">
-                                                            <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create <i class="mdi mdi-chevron-down"></i></button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Gift</a>
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg1">Reward</a>
-                                                                <a class="dropdown-item" href="#">Incentive</a>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Give <i class=" mdi mdi-dots-horizontal"></i></button>
                                                             </div>
                                                         </div>
 
@@ -699,13 +845,10 @@
 
                                                     <td class="small"><i class="fa fa-diamond" aria-hidden="true"></i> 132</td>
                                                     <td>
-                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Give shoutout"><i class="mdi mdi-bullhorn"></i></a>
+                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shoutout"><i class="mdi mdi-bullhorn"></i></a>
                                                         <div class="btn-group">
-                                                            <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create <i class="mdi mdi-chevron-down"></i></button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Gift</a>
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg1">Reward</a>
-                                                                <a class="dropdown-item" href="#">Incentive</a>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Give <i class=" mdi mdi-dots-horizontal"></i></button>
                                                             </div>
                                                         </div>
 
@@ -735,13 +878,10 @@
 
                                                     <td class="small"><i class="fa fa-diamond" aria-hidden="true"></i> 132</td>
                                                     <td>
-                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Give shoutout"><i class="mdi mdi-bullhorn"></i></a>
+                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shoutout"><i class="mdi mdi-bullhorn"></i></a>
                                                         <div class="btn-group">
-                                                            <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create <i class="mdi mdi-chevron-down"></i></button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Gift</a>
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg1">Reward</a>
-                                                                <a class="dropdown-item" href="#">Incentive</a>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Give <i class=" mdi mdi-dots-horizontal"></i></button>
                                                             </div>
                                                         </div>
 
@@ -771,13 +911,10 @@
 
                                                     <td class="small"><i class="fa fa-diamond" aria-hidden="true"></i> 132</td>
                                                     <td>
-                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Give shoutout"><i class="mdi mdi-bullhorn"></i></a>
+                                                        <a href="javascript: void(0);" class="btn btn-light btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shoutout"><i class="mdi mdi-bullhorn"></i></a>
                                                         <div class="btn-group">
-                                                            <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create <i class="mdi mdi-chevron-down"></i></button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Gift</a>
-                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bs-example-modal-lg1">Reward</a>
-                                                                <a class="dropdown-item" href="#">Incentive</a>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-light dropdown-toggle btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Give <i class=" mdi mdi-dots-horizontal"></i></button>
                                                             </div>
                                                         </div>
 
@@ -828,7 +965,7 @@
 
 
                                             <div class="btn-group mb-3 float-right">
-                                                <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create <i class="mdi mdi-chevron-down"></i></button>
+                                                <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Give <i class=" mdi mdi-dots-horizontal"></i></button>
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a class="dropdown-item" href="#">Gift</a>
                                                     <a class="dropdown-item" href="#">Reward</a>
